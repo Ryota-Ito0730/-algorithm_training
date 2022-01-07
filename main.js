@@ -36,6 +36,18 @@
 //   console.log("No!!")
 // }
 
+/******
+*P30～4-3 繰り返し判定の解釈1-終了条件と反復条件
+******/
+let x = 1;
+let n = 1;
+for (n; n <= 5; n++) {
+  console.log("x in for", x)
+  console.log("n in for", n);
+  x = x * n;
+}
+console.log("outside for : n", n);
+
 
 // page48～
 // let str = ['R', 'I', 'C', 'H', 'T', 'E', 'L', 'E', 'C', 'O', 'M'];
