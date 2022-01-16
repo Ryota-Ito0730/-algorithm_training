@@ -30,10 +30,24 @@ for ($k; $k <= $max; $k++) {
   include('annual_sales_category.php');
   $sk = ++$sum;
   $arr_a[$s][$u] = $sk;
-  var_dump($sk);
   $sum = 0;
+}
+// 集計結果を出力
+// 最上部の$iと$jを再初期化
+$l = 1;
+$m = 1;
+// var_dump($arr_a);
+$x = "";
+for ($l; $l <= $max_arr_a; $l++) {
+  for ($m; $m <= $max_arr_b; $m++) {
+    if ($m <= 4) {
+      echo $arr_a[$l][$m];
+    } elseif ($m >= 5) {
+      echo $arr_a[$l][$m] . '<br>';
+    }
+  }
+  $m = 1;
 }
 echo ('<pre>');
 var_dump($arr_a);
-var_dump($companies);
 echo ('</pre>');
