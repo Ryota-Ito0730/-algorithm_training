@@ -49,5 +49,5 @@ for ($l; $l <= $max_arr_a; $l++) {
   $m = 1;
 }
 echo ('<pre>');
-var_dump($arr_a);
+// var_dump($arr_a);
 echo ('</pre>');
