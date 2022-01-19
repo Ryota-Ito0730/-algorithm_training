@@ -9,24 +9,29 @@ $i = 1;
 for ($i; $i <= $max; $i++) {
   $array_q[$i] = 1;
 }
-var_dump($array_q);
+// echo '<pre>';
+// var_dump($array_q);
+// echo '</pre>';
 
 $j = 1;
-$l = 1;
+$l = 2;
+$m = 1;
 $tk = "";
 $tl = "";
+// $array_t = [1 => 23, 2 => 35, 3 => 18, 4 => 50];
 for ($j; $j <= $max - 1; $j++) {
-  $tk = $array_t[$j];
+  $tk = $array_t[$j]; // int(23) int(35) int(18) int(50)
+  // var_dump($tk);
   for ($l; $l <= $max; $l++) {
     $tl = $array_t[$l];
-    var_dump($tl);
+    // var_dump($tl);
     if ($tk < $tl) {
       $array_q[$j] = $array_q[$j] + 1;
     } elseif ($tk > $tl) {
-      $array_q[$j + 1] = $array_q[$j + 1] + 1;
+      $array_q[$l] = $array_q[$l] + 1;
     }
   }
-  $l = 1;
+  $l = 2 + $m++;
 }
 
 echo '<pre>';
