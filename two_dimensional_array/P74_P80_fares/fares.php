@@ -1,5 +1,6 @@
 <?php
 include("./station_name_sign.php");
+include("./station_search.php");
 // 駅リストを元に料金表を作成する
 $max = count($array_station_name_sign);
 $fares_y = [];
