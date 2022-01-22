@@ -1,7 +1,6 @@
 <?php
-include("./station_name_sign.php");
-include("./station_search.php");
 // 駅リストを元に料金表を作成する
+include("./station_name_sign.php");
 $max = count($array_station_name_sign);
 $fares_y = [];
 $fares_x = [];
@@ -59,3 +58,22 @@ for ($y; $y <= $max; $y++) {
 // echo "<pre>";
 // var_dump();
 // echo "</pre>";
+
+
+// -----メインの流れ図をここから追記していく
+
+// 駅名変換ファイルから該当する駅名の番号を返す($xに格納される)
+// include("./station_name_sign.php");
+include("./station_search.php");
+$x = station_searcher($array_station_name_sign, $station_name01);
+$o = $x;
+
+$x = station_searcher($array_station_name_sign, $station_name02);
+$p = $x;
+
+$outbound = $fares_y[$o][$p];
+
+$return_trip = $fares_y[$p][$o];
+$total_price = $outbound + $return_trip;
+
+echo $total_price;
