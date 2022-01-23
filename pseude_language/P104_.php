@@ -28,11 +28,28 @@
 // }
 
 //P108-----mod関数(基本情報技術者試験独自のあまりを求める関数の表記のこと)
-function mod($arg01, $arg02)
-{
-  return '余りは' . $arg01 % $arg02 . 'です';
+// function mod($arg01, $arg02)
+// {
+//   return '余りは' . $arg01 % $arg02 . 'です';
+// }
+
+// $a = 11;
+// $b = 2;
+// echo mod($a, $b);
+
+// P.120
+$a = '';
+$b = '';
+$syou = '';
+
+$syou = 0;
+$a = 11;
+$b = 3;
+while ($a >= $b) {
+  $a = $a - $b;
+  $syou = $syou + 1;
 }
 
-$a = 11;
-$b = 2;
-echo mod($a, $b);
+
+echo '商($syou)は' . $syou . 'です<br>';
+echo '余り($a)は' . $a . 'です';
