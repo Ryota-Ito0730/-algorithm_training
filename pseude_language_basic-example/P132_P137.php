@@ -28,10 +28,19 @@ $alphabet_array = [
   'y',
   'z'
 ];
-var_dump($alphabet_array);
+echo '<pre>';
+// var_dump($alphabet_array);
+// var_dump($alphabet_array[0][0] = $alphabet_array[1][0]);
+// var_dump($alphabet_array);
+
+$a = array_keys($alphabet_array);
+var_dump($a);
+// $b = array_values($alphabet_array);
+// var_dump($b);
+echo '</pre>';
 $alphabet_array_length = count($alphabet_array);
-$ai = 1;
-for ($ai; $ai <= $alphabet_array_length; $ai++) {
-  $alphabet_array[$ai] = $alphabet_array[$ai - 1];
-}
-var_dump($alphabet_array);
+// $ai = 1;
+// for ($ai; $ai <= $alphabet_array_length; $ai++) {
+//   $alphabet_array[$ai] = $alphabet_array[$ai - 1];
+// }
+// var_dump($alphabet_array);
