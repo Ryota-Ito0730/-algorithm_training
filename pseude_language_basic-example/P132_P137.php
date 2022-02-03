@@ -28,19 +28,33 @@ $alphabet_array = [
   'y',
   'z'
 ];
-echo '<pre>';
-// var_dump($alphabet_array);
-// var_dump($alphabet_array[0][0] = $alphabet_array[1][0]);
-// var_dump($alphabet_array);
+// 文字配列(#が選択された時点で処理は終了を示す)
+$moji_array = [1 => 'g', 2 => 'i', 3 => 'j', 4 => 'i', 5 => 'g', 6 => 'e', 7 => 'n', 8 => 'g', 9 => 'o', 10 => '#'];
 
-$a = array_keys($alphabet_array);
-var_dump($a);
-// $b = array_values($alphabet_array);
-// var_dump($b);
+$max = count($alphabet_array); // 26
+$count_array = [];
+$i = 1;
+$j = 1;
+// 文字列のカウント結果を格納する配列を0埋め
+for ($j; $j <= $max; $j++) {
+  $count_array[$j] = 0;
+}
+
+$i = 1;
+while ($moji_array[$i] !== '#') {
+  $j = 1;
+  while ($alphabet_array[$j] !== $moji_array[$i]) {
+    // var_dump($j);
+    $j++;
+  }
+  $count_array[$j] = $count_array[$j] + 1;
+  $i++;
+}
+
+
+
+
+
+echo '<pre>';
+var_dump($count_array);
 echo '</pre>';
-$alphabet_array_length = count($alphabet_array);
-// $ai = 1;
-// for ($ai; $ai <= $alphabet_array_length; $ai++) {
-//   $alphabet_array[$ai] = $alphabet_array[$ai - 1];
-// }
-// var_dump($alphabet_array);
