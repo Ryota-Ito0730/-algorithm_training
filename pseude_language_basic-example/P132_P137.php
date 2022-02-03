@@ -47,14 +47,14 @@ while ($moji_array[$i] !== '#') {
     // var_dump($j);
     $j++;
   }
+  $j++;
   $count_array[$j] = $count_array[$j] + 1;
   $i++;
 }
 
-
-
-
+$count_result = array_combine($alphabet_array,  $count_array);
 
 echo '<pre>';
-var_dump($count_array);
+// var_dump($count_array);
+var_dump($count_result);
 echo '</pre>';
